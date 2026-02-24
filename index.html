@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Lead Scoring CRM</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🤖 AI Lead Scoring Assistant CRM</h1>
+        
+        <!-- Add Lead Form -->
+        <div class="lead-form">
+            <h2>Add New Lead</h2>
+            <form id="leadForm" class="form-grid">
+                <input type="text" id="name" placeholder="Full Name" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="tel" id="phone" placeholder="Phone/WhatsApp">
+                <select id="source">
+                    <option value="">Lead Source</option>
+                    <option value="website">Website Registration</option>
+                    <option value="call">Call Enquiry</option>
+                    <option value="whatsapp">WhatsApp Enquiry</option>
+                    <option value="event">Event Lead</option>
+                    <option value="referral">Referral</option>
+                </select>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" id="demoRequested"> Demo Requested</label>
+                    <label><input type="checkbox" id="pricingCompared"> Pricing Comparison Viewed</label>
+                    <label><input type="checkbox" id="multipleEnquiries"> Multiple Enquiries</label>
+                </div>
+                <div></div>
+                <button type="submit">🚀 Score & Add Lead</button>
+            </form>
+        </div>
+        
+        <!-- Leads Table -->
+        <div class="leads-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Contact</th>
+                        <th>Source</th>
+                        <th>Score</th>
+                        <th>AI Explanation</th>
+                        <th>Next Action</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody id="leadsTableBody"></tbody>
+            </table>
+        </div>
+    </div>
+    
+    <!-- Modal -->
+    <div id="detailModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
